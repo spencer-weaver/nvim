@@ -74,6 +74,12 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  harpoon = {
+    config = { "\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\fharpoon\frequire\0" },
+    loaded = true,
+    path = "/home/sweaver/.local/share/nvim/site/pack/packer/start/harpoon",
+    url = "https://github.com/ThePrimeagen/harpoon"
+  },
   neovim = {
     config = { "\27LJ\2\n9\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\26colorscheme rose-pine\bcmd\bvim\0" },
     loaded = true,
@@ -99,10 +105,24 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/sweaver/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
+  },
+  wordnav = {
+    config = { "\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\fwordnav\frequire\0" },
+    loaded = true,
+    path = "/home/sweaver/.local/share/nvim/site/pack/packer/start/wordnav",
+    url = "/home/sweaver/.config/nvim/lua/sweaver/wordnav"
   }
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: wordnav
+time([[Config for wordnav]], true)
+try_loadstring("\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\fwordnav\frequire\0", "config", "wordnav")
+time([[Config for wordnav]], false)
+-- Config for: harpoon
+time([[Config for harpoon]], true)
+try_loadstring("\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\fharpoon\frequire\0", "config", "harpoon")
+time([[Config for harpoon]], false)
 -- Config for: neovim
 time([[Config for neovim]], true)
 try_loadstring("\27LJ\2\n9\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\26colorscheme rose-pine\bcmd\bvim\0", "config", "neovim")

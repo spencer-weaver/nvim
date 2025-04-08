@@ -1,16 +1,23 @@
-require("sweaver.remap")
-require("sweaver.packer")
 
 -- line numbers
 vim.opt.number = true
 vim.opt.relativenumber = true
 
 vim.api.nvim_create_autocmd("FileType", {
-  pattern = "netrw",
-  callback = function()
-    vim.opt_local.number = true
-    vim.opt_local.relativenumber = true
-  end
+	pattern = "netrw",
+	callback = function()
+		vim.opt_local.number = true
+		vim.opt_local.relativenumber = true
+	end
+})
+
+vim.api.nvim_create_autocmd("TermOpen", {
+	pattern = "*",
+	callback = function()
+		vim.wo.number = false
+		vim.wo.relativenumber = false
+		vim.wo.cursorline = false
+	end,
 })
 
 -- whitespace
@@ -25,3 +32,6 @@ vim.opt.listchars = {
 	precedes = '⟨'
 }
 
+require("sweaver.remap")
+require("sweaver.packer")
+require("sweaver.harpoon")
