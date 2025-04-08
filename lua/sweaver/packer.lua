@@ -34,14 +34,4 @@ return require('packer').startup(function(use)
 		end
 	}
 
-	-- custom plugins
-
-	-- wordnav
-	use {
-		'~/.config/nvim/lua/sweaver/wordnav',
-		config = function()
-			require("wordnav").setup()
-		end
-	}
-
 end)
